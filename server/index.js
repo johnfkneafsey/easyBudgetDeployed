@@ -18,7 +18,7 @@ app.use(passport.initialize());
 passport.use(
     new GoogleStrategy({
         clientID:  '172739207430-a4207nj9v3dfdmbmdf652at6m2epdi7i.apps.googleusercontent.com',
-        clientSecret: secret,
+        clientSecret: 'gNNdHFELvLp3gmqiXICj2__l',
         callbackURL: `/api/auth/google/callback`
     },
     (accessToken, refreshToken, profile, cb) => {
