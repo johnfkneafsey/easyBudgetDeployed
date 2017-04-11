@@ -6,7 +6,7 @@ const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const BearerStrategy = require('passport-http-bearer').Strategy;
 
-const secret = require('./secret');
+// const secret = require('./secret');
 const { User } = require('./models');
 const app = express();
 mongoose.Promise = global.Promise;
