@@ -1,10 +1,12 @@
+/* eslint-disable */
 import React from 'react';
 import * as Cookies from 'js-cookie';
-
-import QuestionPage from './question-page';
+import { connect } from 'react-redux';
+import store from '../store';
+import Layout from './layout';
 import LoginPage from './login-page';
 
-class App extends React.Component {
+export class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -13,18 +15,15 @@ class App extends React.Component {
     }
 
     componentDidMount() {
-        // Job 4: Redux-ify all of the state and fetch calls to async actions.
         const accessToken = Cookies.get('accessToken');
         if (accessToken) {
-            fetch('/api/me', {
+            fetch(`/api/me`, {
                 headers: {
                     'Authorization': `Bearer ${accessToken}`
                 }
             }).then(res => {
                 if (!res.ok) {
                     if (res.status !== 401) {
-                        // Unauthorized, clear the cookie and go to
-                        // the login page
                         Cookies.remove('accessToken');
                         return;
                     }
@@ -39,13 +38,31 @@ class App extends React.Component {
         }
     }
 
-    render() {
-        if (!this.state.currentUser) {
-            return <LoginPage />;
-        }
 
-        return <QuestionPage />;
-    }
+    render() {
+         if (!this.state.currentUser) {
+             console.log('WE ARE RENDERING LOGIN?')
+            return <LoginPage />;
+         } else {
+             console.log('WE ARE RENDERING LAYOUT?')
+             return <Layout />;
+         }
+     }
 }
 
-export default App;
+const mapStateToProps = (state, props) => ({
+	_id: state._id,
+	googleId: state.googleId,
+	accessToken: state.accessToken,
+	name: state.name,
+	expenses: state.expenses,
+	goals: state.goals,
+	categories: state.categories,
+	categoryTotals: state.categoryTotals,
+	currentCategory: state.currentCategory,
+	calendar: state.calendar,
+	displayTransactions: state.displayTransactions,
+	renderPage: state.renderPage
+});
+
+export default connect(mapStateToProps)(App)
