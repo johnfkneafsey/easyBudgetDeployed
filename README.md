@@ -9,7 +9,7 @@ It's as easy as 1, 2, 3!
 2. Set budgets for each category
 3. Enter your expenses
 
-At any time, you can come back and add, delete and edit your expenses, define new categories and create new budgets.  Furthermore, Easy Budget provides a variety of summary tools that allow you to track and compare your expenses across categories and over time. 
+At any time, you can come back and add/delete/edit expenses, define new categories and create new budgets.  Furthermore, Easy Budget provides a variety of summary tools that allow you to track and compare your expenses across categories and over time. 
 
 ## Tech Stack
 M - MongoDb
