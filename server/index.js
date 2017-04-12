@@ -12,7 +12,6 @@ const app = express();
 mongoose.Promise = global.Promise;
 const jsonParser = bodyParser.json();
 
-
 app.use(passport.initialize());
 
 passport.use(
