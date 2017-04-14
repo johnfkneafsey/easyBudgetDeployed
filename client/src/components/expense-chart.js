@@ -269,7 +269,8 @@ render () {
 					</div>
 
                     <div className="stepHeaders">
-                        <h1><h2><u>Chart</u></h2>Expenditures by Category</h1>
+                        <h1 className="stepHeaders" >Expenditures by Category</h1>
+                        <br></br>
                         <Doughnut className="chart" data={this.doughnutData()} height={280} width={280}/>
                     </div>
 

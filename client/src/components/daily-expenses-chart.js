@@ -227,25 +227,23 @@ export class DailyExpensesChart extends React.Component {
 
         let lineChartDisplay
         if (this.state.lineData.labels) {
-            lineChartDisplay = <Line className="chart-line" data={this.state.lineData} width={800} height={400} />
+            
+            lineChartDisplay = <div><p>Rotate screen to view</p><Line className="chart-line" data={this.state.lineData} width={700} height={400} /> </div>
         }
 
         let transactionsBlurb = <h3>Showing <span className="greenie" >{this.props.currentCategory}</span> transactions between <span className="greenie" >{this.props.displayTransactions.startDate}</span> and <span className="greenie" >{this.props.displayTransactions.endDate}</span> </h3>
 
 
     return (
-
         <div>
             <nav id="mainNav" className="navbar navbar-default navbar-fixed-top navbar-custom">
                 <div className="container">
-
                     <div className="navbar-header page-scroll">
                         <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                             <span className="sr-only">Toggle navigation</span> Menu <i className="fa fa-bars"></i>
                         </button>
                         <a className="navbar-brand" href="#page-top">Easy Budget</a>
                     </div>
-
                     <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul className="nav navbar-nav navbar-right">
                             <li className="hidden">
@@ -263,29 +261,25 @@ export class DailyExpensesChart extends React.Component {
                         </ul>
                     </div>
                 </div>
-                <div className="green-bar">
-                </div>
+                <div className="green-bar"></div>
             </nav>
 			<div className="container">
 				<div className="summaryContent">
-
 					<div className="buttons">
 						<button className=" glyphicon glyphicon-chevron-left directionalButtons" onClick={() => this.onClickBack()} ></button>
 					</div>
-
                     <div className="stepHeaders">
-
-                        <h1><h2><u>Chart</u></h2>Transactions by Day</h1>
+                        <h1 className="stepHeaders" >Transactions by Day</h1>
                             {lineChartDisplay}
                         <form onSubmit={this.onSubmit}>
-                            <label className="category" >Choose a start date,</label>
+                            <label className="category" >Choose a start date</label>
                             <DatePicker  className='calendarToggle' id="example-datepicker-start" ref="datePicked" onChange={this.handleChangeStartDate} />
                             <label className="category" >Choose an end date</label>
                             <DatePicker  className='calendarToggle' id="example-datepicker-end" ref="datePicked" onChange={this.handleChangeEndDate} />
+                            <br></br>
                             <input type="submit" className="btn btn-primary"/>
                         </form>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -310,7 +304,3 @@ const mapStateToProps = (state, props) => ({
 
 export default connect(mapStateToProps)(DailyExpensesChart);
 
-/*<div>
-    <h3>Spent vs. Budgeted by Category</h3>
-    <Radar className="chart" data={this.radarData()} />
-</div>*/

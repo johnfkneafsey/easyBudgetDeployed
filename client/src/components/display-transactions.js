@@ -159,13 +159,12 @@ export class DisplayTransactions extends React.Component {
 						<label className='' >and an end date</label>
 						<DatePicker  className='calendarToggle' id="example-datepicker-end"   ref="datePicked" onChange={this.handleChangeEndDate}   placeholderText={this.props.displayTransactions.endDate}/>
 						<br></br>
-
 					</form>
-						{transactionsBlurb}
-						<br></br>
-						<br></br>
+					{transactionsBlurb}
+					<br></br>
+					<br></br>
 					<div>
-					<table className="table">
+					<table className="table transactions-table">
 						<thead><tr><th>Date</th><th>Category</th><th>Amount</th><th>Description</th><th>Remove</th></tr></thead>
 						<tbody>
 							{listOfTransactions}
