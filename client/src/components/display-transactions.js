@@ -78,7 +78,7 @@ export class DisplayTransactions extends React.Component {
 
 		let transactionsBlurb;
 		if (this.props.displayTransactions.startDate || this.props.displayTransactions.endDate) {
-			transactionsBlurb = <h3>Showing <span className="greenie" >{this.props.currentCategory}</span> transactions between <span className="greenie" >{this.props.displayTransactions.startDate}</span> and <span className="greenie" >{this.props.displayTransactions.endDate}</span> </h3>
+			transactionsBlurb = <h3 className="transaction-span" >Showing <span className="greenie" >{this.props.currentCategory}</span> transactions between <span className="greenie" >{this.props.displayTransactions.startDate}</span> and <span className="greenie" >{this.props.displayTransactions.endDate}</span> </h3>
 		}
 
 		let listOfTransactions;

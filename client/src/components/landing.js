@@ -95,7 +95,7 @@ export class Landing extends React.Component {
 					<h1 className="landingHeader" >Ready to make budgeting easy?</h1>
 					<hr className="star-primary"></hr>
 					<br></br>
-						<h2>It's as easy as  1... 2... 3...</h2>
+						<h2 className="easy-as" >It's as easy as  1... 2... 3...</h2>
 					<div className="stepsLanding" >
 						<h4>1. Enter categories for your expenses</h4>
 						<br></br>

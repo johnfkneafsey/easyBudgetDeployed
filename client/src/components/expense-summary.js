@@ -182,7 +182,7 @@ export class ExpenseSummary extends React.Component {
 						<td className="category-title center-no-height">__________</td>
 						<td className="center"><b className="center">__________</b></td>
 						<td className="center"><b className="center">__________</b></td>
-						<td className="center"><b className="center">________________________________________________________________________________</b></td>
+						<td className="center"><b className="center longline">________________________________________________________________________________</b></td>
 					</tr>
 						{totals}
 				</table>

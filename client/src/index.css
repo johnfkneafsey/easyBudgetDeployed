@@ -1156,7 +1156,7 @@ animation-duration:2s;
 }
 
 .form-control {
-  width: 300px;
+  width: 200px;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -1327,6 +1327,15 @@ label {
 
 .center-percentages {
     text-align: center  ;
+    display: none;
+}
+
+.longline {
+  display: none;
+}
+
+.transaction-span {
+  font-size: 16px;
 }
 
 .glyphicon-remove {
@@ -1361,7 +1370,7 @@ canvas {
 }
 
 .input-group .form-control {
-    width: 300px !important;
+    width: 200px !important;
     float: none  ;
 }
 
@@ -1428,6 +1437,7 @@ option {
 
 .progress {
     margin-top: 20px;
+    display: none;
 }
 
 .chart-space {
@@ -1443,6 +1453,9 @@ option {
     text-transform: uppercase  ;
 }
 
+.easy-as {
+  font-size: 26px;
+}
 
 body {
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -1943,6 +1956,22 @@ fieldset[disabled] .btn-success.active {
   display: none;
 }
 
+td {
+  font-size: 12px;
+  padding-right: 0px;
+  padding-left: 0px;
+}
 
+th {
+  font-size: 12px;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+tr {
+  margin-left: -20px;
+  padding-right: 0px;
+  padding-left: 0px;
+}
 
 }
