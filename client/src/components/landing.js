@@ -59,25 +59,53 @@ export class Landing extends React.Component {
 
 	return (
     <div className="container ">
-            <div className="landingContainer" >
-                <div className="row">
-                    <div className="col-lg-12 text-center">
-                        <h1 className="landingHeader" >Ready to make budgeting easy?</h1>
-                        <hr className="star-primary"></hr>
-                        <br></br>
-                            <h2>It's as easy as  1... 2... 3...</h2>
-                            <br></br>
-                        <div className="stepsLanding" >
-                            <h4>1. Enter categories for your expenses</h4>
-                            <br></br>
-                            <h4>2. Define budgets for each category</h4>
-                            <br></br>
-                            <h4>3. Input your expenses</h4>
-                        </div>
-                    <div className="buttons">
-                        <button className="glyphicon glyphicon-play landingStart" onClick={() => this.onClickNext()} ></button>
+		    <nav id="mainNav" className="navbar navbar-default navbar-fixed-top navbar-custom">
+                <div className="container">
+
+                    <div className="navbar-header page-scroll">
+                        <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span className="sr-only">Toggle navigation</span> Menu <i className="fa fa-bars"></i>
+                        </button>
+                        <a className="navbar-brand" href="#page-top">Easy Budget</a>
+                    </div>
+
+                    <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul className="nav navbar-nav navbar-right">
+                            <li className="hidden">
+                                <a href="#page-top"></a>
+                            </li>
+                            <li className="page-scroll">
+                                <a href="#portfolio">Advice</a>
+                            </li>
+                            <li className="page-scroll">
+                                <a href="#about">Resources</a>
+                            </li>
+                            <li className="page-scroll">
+                                 <a onClick={this.updateUserInDatabase} href="/api/auth/logout">Sign Out</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
+                <div className="green-bar">
+                </div>
+            </nav>
+            <div className="landingContainer" >
+				<div className="col-lg-12 text-center">
+					<br></br>
+					<h1 className="landingHeader" >Ready to make budgeting easy?</h1>
+					<hr className="star-primary"></hr>
+					<br></br>
+						<h2>It's as easy as  1... 2... 3...</h2>
+					<div className="stepsLanding" >
+						<h4>1. Enter categories for your expenses</h4>
+						<br></br>
+						<h4>2. Define budgets for each category</h4>
+						<br></br>
+						<h4>3. Input your expenses</h4>
+					</div>
+				<div className="buttons">
+					<button className="glyphicon glyphicon-play landingStart" onClick={() => this.onClickNext()} ></button>
+				</div>
             </div>
         </div>
     </div>

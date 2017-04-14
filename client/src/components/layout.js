@@ -29,7 +29,6 @@ export class Layout extends React.Component {
 			console.log('were here at render 0')
 			return (
 			<div>
-				< Title />
 				< Landing  />
 			</div>
 			)
